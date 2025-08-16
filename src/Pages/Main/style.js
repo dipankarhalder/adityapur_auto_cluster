@@ -82,7 +82,7 @@ export const AppDashboardCover = styled.div`
 
       & > span {
         font-weight: 700;
-        color: ${({ theme }) => theme.colors.btnbg};
+        color: #084bb7ff;
       }
     }
 
@@ -157,47 +157,11 @@ export const AppDashboardCover = styled.div`
           }
 
           &.app_collection {
-            background: #e3c9f9;
-            border: 1px solid #7c38b6;
+            background: #e4f4ff;
+            border: 1px solid #479edd;
 
             .app_icontext h6 {
-              color: #7c38b6;
-            }
-          }
-
-          &.app_expense {
-            background: #f6e2c9;
-            border: 1px solid #9f6214;
-
-            .app_icontext h6 {
-              color: #9f6214;
-            }
-          }
-
-          &.app_teacher {
-            background: #ffe7e7;
-            border: 1px solid #bb0a0a;
-
-            .app_icontext h6 {
-              color: #bb0a0a;
-            }
-          }
-
-          &.app_non_teacher {
-            background: #b5f2ff;
-            border: 1px solid #0a7890;
-
-            .app_icontext h6 {
-              color: #0a7890;
-            }
-          }
-
-          &.app_student {
-            background: #def8c9;
-            border: 1px solid #42870a;
-
-            .app_icontext h6 {
-              color: #42870a;
+              color: #1074bd;
             }
           }
         }
@@ -583,10 +547,6 @@ export const AppItemViewCover = styled.div`
               display: flex;
               flex-direction: column;
               gap: 10px;
-              padding: 10px 16px;
-              border-radius: 8px;
-              background: ${({ theme }) => theme.colors.white};
-              border: 1px solid ${({ theme }) => theme.colors.tableborder};
 
               & > p {
                 font-size: 16px;
@@ -605,41 +565,33 @@ export const AppItemViewCover = styled.div`
                   & > span {
                     font-size: 12px;
                     font-weight: 700;
-                    margin-bottom: 4px;
+                    margin-bottom: 10px;
                     text-transform: uppercase;
                     color: #acacac;
 
                     &:nth-child(1) {
-                      width: 12%;
+                      width: 75%;
                     }
                     &:nth-child(2) {
-                      width: 64%;
-                    }
-                    &:nth-child(3) {
-                      width: 12%;
-                    }
-                    &:nth-child(4) {
-                      width: 12%;
+                      width: 25%;
                     }
                   }
 
                   & > p {
                     font-size: 13px;
                     font-weight: 600;
-                    margin-bottom: 4px;
+                    margin-bottom: 6px;
                     color: ${({ theme }) => theme.colors.black};
 
+                    &:last-child {
+                      margin-bottom: 0px;
+                    }
+
                     &:nth-child(1) {
-                      width: 12%;
+                      width: 75%;
                     }
                     &:nth-child(2) {
-                      width: 64%;
-                    }
-                    &:nth-child(3) {
-                      width: 12%;
-                    }
-                    &:nth-child(4) {
-                      width: 12%;
+                      width: 25%;
                     }
                   }
                 }

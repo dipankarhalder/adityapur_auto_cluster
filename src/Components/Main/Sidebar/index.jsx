@@ -1,5 +1,4 @@
 import { useLocation, Link } from "react-router-dom";
-import { Logo } from "../../Common/Logo";
 import { sidebarLink } from "../../../RouteLinks";
 import { paths } from "../../../Constant";
 import {
@@ -13,7 +12,8 @@ import {
   SidebarListItem,
   SidebarLinkStyled,
 } from "./style";
-import { Plus } from "../../../Shared/Icons";
+import { Plus, Logout } from "../../../Shared/Icons";
+import fulllogo from "/fullogo.png";
 
 const normalizePath = (path) =>
   path?.startsWith("/") ? path : `/apps/${path}`;
@@ -28,7 +28,9 @@ export const Sidebar = () => {
   return (
     <AppSideBar>
       <AppSidebarInside>
-        <Logo />
+        <span className="app_logo">
+          <img src={fulllogo} alt="Arunodaya University" />
+        </span>
         <AddNewCandidate>
           <Link to={paths.ADMISSION}>
             <Plus />
@@ -71,6 +73,20 @@ export const Sidebar = () => {
             );
           })}
         </AppSidebarLinkCover>
+        <div className="app_profile_logged_user">
+          <div className="app_avt_wrapper">
+            <span>
+              <img src="/avt.png" alt="profile" />
+            </span>
+            <div className="app_avatar_info">
+              <h6>Himadri C</h6>
+              <span>Admin</span>
+            </div>
+          </div>
+          <div className="app_logout">
+            <Logout />
+          </div>
+        </div>
       </AppSidebarInside>
     </AppSideBar>
   );

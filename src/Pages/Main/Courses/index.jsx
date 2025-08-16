@@ -46,7 +46,7 @@ export const CoursesPage = () => {
       image: item.image,
       name: item.courseName,
       credits: item.credits,
-      status: item.credits % 2 === 0,
+      status: item.credits,
       department: item.department,
       HOD: item.instructor,
       semester: item.semester,
@@ -84,9 +84,7 @@ export const CoursesPage = () => {
         </span>
         <div className="app_inside_main_head">
           <button onClick={() => onAction("view", item)}>{item.name}</button>
-          <p>
-            {item.id} - {item.semester}
-          </p>
+          <p>{item.id}</p>
         </div>
       </div>
       <div className="app_inside_card">
@@ -141,7 +139,7 @@ export const CoursesPage = () => {
         </AppTableDataInformation>
       </AppMainLayoutCover>
 
-      {isOpen && subj.name === "Bachelor of Science" && (
+      {isOpen && subj.name === "Mechanical Engineering" && (
         <AppItemViewCover>
           <div className="internalDetailsContent">
             <div
@@ -155,322 +153,51 @@ export const CoursesPage = () => {
             </div>
             <h2>Course Details</h2>
             <div className="app_detailsSection">
-              <h3>Bachelor of Science (Honors) - 4 years</h3>
+              <h3>Mechanical Engineering</h3>
               <div className="app_details_course">
-                <ul>
-                  <li>
-                    <span>Duration:</span>
-                    <p>8 Semesters</p>
-                  </li>
-                  <li>
-                    <span>Eligibility:</span>
-                    <p>12th Science</p>
-                  </li>
-                  <li>
-                    <span>Department:</span>
-                    <p>Science</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="app_detailsSection">
-              <h3>Bachelor of Science - 3 years</h3>
-              <div className="app_details_course">
-                <ul>
-                  <li>
-                    <span>Duration:</span>
-                    <p>6 Semesters</p>
-                  </li>
-                  <li>
-                    <span>Eligibility:</span>
-                    <p>12th Science</p>
-                  </li>
-                  <li>
-                    <span>Department:</span>
-                    <p>Science</p>
-                  </li>
-                </ul>
-
-                <div className="app_sub_list">
-                  <span
-                    onClick={() => handleAccClick("Physics")}
-                    className={openContext === "Physics" ? "actv_item_sub" : ""}
-                  >
-                    Physics
-                  </span>
-                  <span
-                    onClick={() => handleAccClick("Chemistry")}
-                    className={
-                      openContext === "Chemistry" ? "actv_item_sub" : ""
-                    }
-                  >
-                    Chemistry
-                  </span>
-                  <span
-                    onClick={() => handleAccClick("Biology")}
-                    className={openContext === "Biology" ? "actv_item_sub" : ""}
-                  >
-                    Biology
-                  </span>
-                  <span
-                    onClick={() => handleAccClick("Maths")}
-                    className={openContext === "Maths" ? "actv_item_sub" : ""}
-                  >
-                    Maths
-                  </span>
-                </div>
-
                 <div className="details_elem_cover">
-                  {openContext === "Physics" && (
-                    <div className="main_sub_wrap">
-                      <div className="details_cover">
-                        <p>Semester: 1 (Physics)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
+                  <div className="main_sub_wrap">
+                    <div className="details_cover">
+                      <div className="details_table">
+                        <div className="details_row">
+                          <span>Course Name</span>
+                          <span>Durations</span>
                         </div>
-                      </div>
-                      <div className="details_cover">
-                        <p>Semester: 2 (Physics)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
+                        <div className="details_row">
+                          <p>HOT - Metallurgy with all test</p>
+                          <p>60</p>
                         </div>
-                      </div>
-                      <div className="details_cover">
-                        <p>Semester: 3 (Physics)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
+                        <div className="details_row">
+                          <p>HOT - CNC Milling or VMC</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - Mechanical Calibration</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - CNC Turning</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - 3D Scanner (Reverse Engineering)</p>
+                          <p>40</p>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - Tool Room Operations</p>
+                          <p>120</p>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - CAD</p>
+                          <p>40</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Solid Works</p>
+                          <p>60</p>
                         </div>
                       </div>
                     </div>
-                  )}
-                  {openContext === "Chemistry" && (
-                    <div className="main_sub_wrap">
-                      <div className="details_cover">
-                        <p>Semester: 1 (Chemistry)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="details_cover">
-                        <p>Semester: 2 (Chemistry)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {openContext === "Biology" && (
-                    <div className="main_sub_wrap">
-                      <div className="details_cover">
-                        <p>Semester: 1 (Biology)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="details_cover">
-                        <p>Semester: 2 (Biology)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="details_cover">
-                        <p>Semester: 3 (Biology)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {openContext === "Maths" && (
-                    <div className="main_sub_wrap">
-                      <div className="details_cover">
-                        <p>Semester: 1 (Maths)</p>
-                        <div className="details_table">
-                          <div className="details_row">
-                            <span>Code</span>
-                            <span>Subject</span>
-                            <span>Credits</span>
-                            <span>Marks</span>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 101</p>
-                            <p>Environmental Science</p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                          <div className="details_row">
-                            <p>BSCH 102</p>
-                            <p>
-                              Inorganic Chemistry I: Atomic Structure & Chemical
-                              Bonding (4 + 4)
-                            </p>
-                            <p>4</p>
-                            <p>100</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -478,7 +205,7 @@ export const CoursesPage = () => {
         </AppItemViewCover>
       )}
 
-      {isOpen && subj.name !== "Bachelor of Science" && (
+      {isOpen && subj.name === "Electrical and Electronics" && (
         <AppItemViewCover>
           <div className="internalDetailsContent">
             <div
@@ -492,26 +219,128 @@ export const CoursesPage = () => {
             </div>
             <h2>Course Details</h2>
             <div className="app_detailsSection">
-              <h3>Bachelor of Computer Science</h3>
+              <h3>Electrical and Electronics</h3>
               <div className="app_details_course">
-                <ul>
-                  <li>
-                    <span>Stream:</span>
-                    <p>Computer Science, Information Technology</p>
-                  </li>
-                  <li>
-                    <span>Duration:</span>
-                    <p>6 Semesters</p>
-                  </li>
-                  <li>
-                    <span>Eligibility:</span>
-                    <p>12th PCM</p>
-                  </li>
-                  <li>
-                    <span>Department:</span>
-                    <p>Science</p>
-                  </li>
-                </ul>
+                <div className="details_elem_cover">
+                  <div className="main_sub_wrap">
+                    <div className="details_cover">
+                      <div className="details_table">
+                        <div className="details_row">
+                          <span>Course Name</span>
+                          <span>Durations</span>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - PLC SCADA Basic</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>HOT - PLC SCADA professional</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Embed System</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Drive</p>
+                          <p>30</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Basic of Electronic Design</p>
+                          <p>30</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Internship Program</p>
+                          <p>90</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AppItemViewCover>
+      )}
+
+      {isOpen && subj.name === "Commerce" && (
+        <AppItemViewCover>
+          <div className="internalDetailsContent">
+            <div
+              className="app_close"
+              onClick={() => {
+                setSubj("");
+                setIsOpen(false);
+              }}
+            >
+              <Cross />
+            </div>
+            <h2>Course Details</h2>
+            <div className="app_detailsSection">
+              <h3>Commerce</h3>
+              <div className="app_details_course">
+                <div className="details_elem_cover">
+                  <div className="main_sub_wrap">
+                    <div className="details_cover">
+                      <div className="details_table">
+                        <div className="details_row">
+                          <span>Course Name</span>
+                          <span>Durations</span>
+                        </div>
+                        <div className="details_row">
+                          <p>Tally ERP 9 (Using GST)</p>
+                          <p>60</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Internship Program</p>
+                          <p>90</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AppItemViewCover>
+      )}
+
+      {isOpen && subj.name === "IT / Computer Science" && (
+        <AppItemViewCover>
+          <div className="internalDetailsContent">
+            <div
+              className="app_close"
+              onClick={() => {
+                setSubj("");
+                setIsOpen(false);
+              }}
+            >
+              <Cross />
+            </div>
+            <h2>Course Details</h2>
+            <div className="app_detailsSection">
+              <h3>IT / Computer Science</h3>
+              <div className="app_details_course">
+                <div className="details_elem_cover">
+                  <div className="main_sub_wrap">
+                    <div className="details_cover">
+                      <div className="details_table">
+                        <div className="details_row">
+                          <span>Course Name</span>
+                          <span>Durations</span>
+                        </div>
+                        <div className="details_row">
+                          <p>React Js</p>
+                          <p>50</p>
+                        </div>
+                        <div className="details_row">
+                          <p>Node Js</p>
+                          <p>50</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

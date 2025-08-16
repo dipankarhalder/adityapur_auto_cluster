@@ -121,7 +121,7 @@ export const OtpVerificationPage = () => {
           {errors.otp && (
             <AppOtpErrorMessage>{errors.otp.message}</AppOtpErrorMessage>
           )}
-          <AppBtnField>
+          <AppBtnField style={{ marginBottom: "10px" }}>
             <Button>OTP Verify</Button>
           </AppBtnField>
         </AppFormSignin>
