@@ -4,7 +4,7 @@ import { paths } from "../../../Constant";
 
 const backgroundMap = {
   [paths.LOGIN]: "/authbg.png",
-  [`/${paths.REGISTER}`]: "/createbg.jpg",
+  [`/${paths.REGISTER}`]: "/createbg.png",
   [`/${paths.OTP}`]: "/otpbg.webp",
   [`/${paths.FORGOT}`]: "/forgotbg.png",
 };

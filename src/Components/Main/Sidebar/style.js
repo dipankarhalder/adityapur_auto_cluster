@@ -12,7 +12,7 @@ export const AppSideBar = styled.div`
   flex-direction: column;
   width: 270px;
   height: 100vh;
-  padding: 0px 20px 16px;
+  padding: 10px 20px 16px;
   overflow-y: auto;
   position: fixed;
   top: 0px;
@@ -31,12 +31,75 @@ export const AppSidebarInside = styled.div`
 
   & > span {
     display: flex;
-    width: 100px;
+    width: 100%;
+    justify-content: center;
     margin-bottom: 30px;
 
-    & > svg {
+    & > img {
       width: 100%;
-      height: 36px;
+    }
+  }
+
+  .app_profile_logged_user {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background: ${({ theme }) => theme.colors.white};
+    border: 1px solid ${({ theme }) => theme.colors.tableborder};
+
+    .app_avt_wrapper {
+      display: flex;
+      flex-direction: row;
+
+      & > span {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 10px;
+
+        & > img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .app_avatar_info {
+        display: flex;
+        flex-direction: column;
+
+        h6 {
+          font-size: 15px;
+          font-weight: 00;
+          color: ${({ theme }) => theme.colors.black};
+        }
+
+        & > span {
+          font-size: 12px;
+          font-weight: 600;
+          color: ${({ theme }) => theme.colors.gray};
+        }
+      }
+    }
+
+    .app_logout {
+      width: 20px;
+      height: 20px;
+      transform: rotate(90deg);
+      color: ${({ theme }) => theme.colors.error};
+
+      & > span {
+        width: 20px;
+        height: 20px;
+
+        & > svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
   }
 `;
@@ -52,12 +115,13 @@ export const AddNewCandidate = styled.div`
     width: auto;
     display: flex;
     align-items: center;
-    padding: 8px 16px 9px 12px;
+    padding: 11px 20px 11px 14px;
     border-radius: 6px;
     margin-bottom: 30px;
     margin-top: 10px;
     justify-content: center;
     background: ${({ theme }) => theme.colors.btnbg};
+    box-shadow: 0px 1px 1px 0px #25292e1a, 0px 3px 6px 0px #25292e1f;
 
     & > span {
       display: flex;
