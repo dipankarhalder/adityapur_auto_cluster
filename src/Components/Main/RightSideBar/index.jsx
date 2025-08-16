@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ShortCalender } from "../../../Shared/ShortCalender";
-import { Hostel, CheckPlus, CrossTick, Logout } from "../../../Shared/Icons";
+import { Hostel, CheckPlus, CrossTick } from "../../../Shared/Icons";
 import { AppRightSideBar } from "./style";
 
 const today = new Date();
@@ -13,20 +13,6 @@ const formattedDate = `${weekday}, ${date}`;
 export const RightSideBar = () => {
   return (
     <AppRightSideBar>
-      <div className="app_profile_logged_user">
-        <div className="app_avt_wrapper">
-          <span>
-            <img src="/avt.png" alt="profile" />
-          </span>
-          <div className="app_avatar_info">
-            <h6>Himadri C</h6>
-            <span>Admin</span>
-          </div>
-        </div>
-        <div className="app_logout">
-          <Logout />
-        </div>
-      </div>
       <ShortCalender />
       <div className="app_schedule_items">
         <h2>Schedules</h2>

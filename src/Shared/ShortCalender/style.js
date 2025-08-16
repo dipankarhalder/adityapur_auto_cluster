@@ -73,7 +73,7 @@ export const AppShortCalendarContainer = styled.div`
   }
 
   .calendar-day.today {
-    background-color: #0d37a3;
+    background-color: #479edd;
     color: white;
     border-radius: 6px;
   }

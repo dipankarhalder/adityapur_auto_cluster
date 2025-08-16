@@ -15,7 +15,7 @@ export const Overview = () => {
           </div>
         </li>
         <li>
-          <div className="app_child_inside app_expense">
+          <div className="app_child_inside app_collection">
             <Rupees />
             <p>Overall Expenses</p>
             <div className="app_icontext">
@@ -25,7 +25,7 @@ export const Overview = () => {
           </div>
         </li>
         <li>
-          <div className="app_child_inside app_teacher">
+          <div className="app_child_inside app_collection">
             <Profile />
             <p>Total Teaching Staff</p>
             <div className="app_icontext">
@@ -35,7 +35,7 @@ export const Overview = () => {
           </div>
         </li>
         <li>
-          <div className="app_child_inside app_non_teacher">
+          <div className="app_child_inside app_collection">
             <Members />
             <p>Non-Teaching Staff</p>
             <div className="app_icontext">
@@ -45,7 +45,7 @@ export const Overview = () => {
           </div>
         </li>
         <li>
-          <div className="app_child_inside app_student">
+          <div className="app_child_inside app_collection">
             <Teams />
             <p>Total Student</p>
             <div className="app_icontext">
